@@ -37,7 +37,7 @@ schema.moveField("answer", after="title")
 class FAQEntry(ATCTContent):
     """A frequently asked question."""
 
-    __implements__             = (ATCTContent.__implements__,)
+#    __implements__             = (ATCTContent.__implements__,)
     schema                     = schema
     global_allow               = False
     _at_rename_after_creation  = True
