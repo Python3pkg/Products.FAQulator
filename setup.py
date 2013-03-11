@@ -5,8 +5,10 @@ version = '1.6'
 
 setup(name='Products.FAQulator',
       version=version,
-      description="",
-      long_description="",
+      description="This product implements a simple FAQ content type.",
+      long_description=open("README.txt").read() + "\n" +
+                       open("HISTORY.txt").read(),
+
       classifiers=[
         "Framework :: Plone",
         "Framework :: Plone :: 4.2",
