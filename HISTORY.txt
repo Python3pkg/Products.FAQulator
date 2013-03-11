@@ -1,8 +1,11 @@
 Changelog
 =========
 
-1.6 - March 24, 2010
---------------------
+1.6 (2013-03-11)
+----------------
+
+* Make release Plone 4.2/4.3 compatible and release to Pypi
+  [vincentpsarga, fredvd]
 
 * Added HISTORY.txt
   [piv]
