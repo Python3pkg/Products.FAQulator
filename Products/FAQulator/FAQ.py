@@ -17,15 +17,15 @@ schema  = ATFolderSchema.copy() + Schema((
             accessor   = "Description",
             storage    = MetadataStorage(),
             widget     = VisualWidget(
-                label             = _(u"faq_introlabel", default=u"Description"),
-                description       = _(u"faq_intro", default=u"Text above the questions list"),
+                label             = _("faq_introlabel", default="Description"),
+                description       = _("faq_intro", default="Text above the questions list"),
                   ),
         ),
         BooleanField("show_header",
             searchable  = False,
             widget      = BooleanWidget(
-                label             = _(u"faq_showheaderlabel", default=u"Show question list"),
-                description       = _(u"faq_showheader", default=u"Show a short list with all questions at the top of "
+                label             = _("faq_showheaderlabel", default="Show question list"),
+                description       = _("faq_showheader", default="Show a short list with all questions at the top of "
                                                                   "the FAQ. This can make it navigation easier if you have "
                                                                   "a large number of entries in your FAQ.")
                 ),
@@ -34,8 +34,8 @@ schema  = ATFolderSchema.copy() + Schema((
             searchable = False,
             default    = True,
             widget     = BooleanWidget(
-                label         = _(u"faq_showanswerslabel", default=u"Show answers"),
-                description   = _(u"faq_showanswers", default=u"Show the individual questions and their answers in full. This "
+                label         = _("faq_showanswerslabel", default="Show answers"),
+                description   = _("faq_showanswers", default="Show the individual questions and their answers in full. This "
                                                                "is standard behaviour for a FAQ.")
             ),
         ),
@@ -80,7 +80,7 @@ class FAQ(ATFolder):
         """
 
         if not (int(REQUEST.form.get("show_header",1)) or int(REQUEST.form.get("show_answers",1))):
-            errors["show_header"]=_(u"Please select one of the show question list or show answers options")
+            errors["show_header"]=_("Please select one of the show question list or show answers options")
 
 
 registerType(FAQ, PROJECTNAME)

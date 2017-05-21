@@ -9,7 +9,7 @@ except ImportError:
     HAS_GENERICSETUP = False
 
 
-from config import *
+from .config import *
 
 from zope.i18nmessageid import MessageFactory
 FAQulatorMessageFactory = MessageFactory('faqulator')
@@ -17,7 +17,7 @@ FAQulatorMessageFactory = MessageFactory('faqulator')
 registerDirectory(SKINS_DIR, GLOBALS)
 
 def initialize(context):
-    import FAQ, FAQEntry
+    from . import FAQ, FAQEntry
 
     content_types, constructors, ftis = process_types(
                     listTypes(PROJECTNAME),

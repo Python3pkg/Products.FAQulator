@@ -19,8 +19,8 @@ schema  = ATContentTypeSchema.copy() + Schema((
         default_content_type    = 'text/html',
         default_output_type     = 'text/html',
         widget                  = RichWidget(
-            label       = _(u"faq_answer_label", default=u"Answer"),
-            description = _(u"faq_answer", default=u"The answer to the question."),
+            label       = _("faq_answer_label", default="Answer"),
+            description = _("faq_answer", default="The answer to the question."),
             )
         ),
     ))
@@ -29,8 +29,8 @@ schema['allowDiscussion'].schemata = 'default'
 schema.delField('description')
 
 schema["title"].widget=StringWidget(
-                label             = _(u"faq_question_label", default=u"Question"),
-                description       = _(u"faq_question", default=u"A commonly asked question.")
+                label             = _("faq_question_label", default="Question"),
+                description       = _("faq_question", default="A commonly asked question.")
                 )
 schema.moveField("answer", after="title")
 
